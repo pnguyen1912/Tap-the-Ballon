@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body style='background-color:pink'>
+    <div style="text-align:center">
+        <div>
+            <h1>Tap the Ballon</h1>
+        </div>
+        <div id='root'>
+            <div>
+                <button id='changebtn' onclick="myPage.showhide()">Show Instruction</button>
+            </div>
+            <div style='display:none' id='list'>
+                <ul>
+                    <li>Wait until the ballon show</li>
+                    <li>Tap on the ballon</li>
+                    <li>Get points</li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <div id='changebtn1'>
+            <button onclick="myPage.dotsh()">Start Game</button>
+        </div>
+        <br><br><br>
+        <div style='display:none' id="dot1" onclick="upcount()">
+            <img src="ballon.png" alt="err">
+        </div>
+        <div style='display:none' id="dot2" onclick="upcount()">
+            <img src="ballon.png" alt="err">
+        </div>
+        <div style='display:none' id="dot3" onclick="upcount()">
+            <img src="ballon.png" alt="err">
+        </div>
+        <div style='display:none; position: absolute;bottom: 3%' id='newgame'>
+            <h2>Are you happy with your result?</h2>
+            <button>Yes</button>
+            <button>NO</button>
+        </div>
+        <div style='display:none;position: absolute; bottom: 20%;font-size:30px' id='result'>
+
+        </div>
+    </div>
+    <script src="1.js"></script>
+   
+</body>
+
+</html>
