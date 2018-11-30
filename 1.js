@@ -14,10 +14,15 @@ class monkeyPage {
         }
     }
 
-    dotsh() {let hidebtn = document.getElementById('changebtn1');
-        var z= setInterval(function(){
+    dotsh() {
+        let hidebtn = document.getElementById('changebtn1');
+        let hidebtn1 = document.getElementById('root');
+        var z = setInterval(function () {
             hidebtn.style.display = 'none'
-        },1);
+        }, 1);
+        var y = setInterval(function () {
+            hidebtn1.style.display = 'none'
+        }, 1);
         var a = setInterval(function () {
             let dot = document.getElementById('dot1');
             if (dot.style.display == 'none') {
@@ -55,6 +60,9 @@ class monkeyPage {
         setTimeout(function () {
             clearInterval(z);
         }, 5000);
+        setTimeout(function () {
+            clearInterval(y);
+        }, 5000);
 
         var d = setInterval(function () {
 
@@ -62,6 +70,7 @@ class monkeyPage {
             create.innerHTML = `Your Score ${count}`
             create.style.display = 'block';
             hidebtn.style.display = 'block';
+            hidebtn1.style.display = 'block';
             if (count > 0) {
                 count = 0
             }
@@ -79,8 +88,20 @@ class monkeyPage {
             clearInterval(e);
         }, 5001);
     }
-}
+    clickyes() {
+        let yes = document.getElementById('yes');
+        yes.style.display = 'none';
+        let page2 = document.getElementById('page2');
+        page2.style.display = 'block';
+    }
 
+    clicksubmit() {
+        let submit = document.getElementById('page3');
+        submit.style.display = 'block';
+        let page2 = document.getElementById('page2');
+        page2.style.display = 'none';
+    }
+}
 let myPage = new monkeyPage();
 
 let count = 0;

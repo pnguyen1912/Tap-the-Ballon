@@ -9,9 +9,10 @@
 </head>
 
 <body style='background-color:pink'>
-    <div style="text-align:center">
+    <div id='yes' style="text-align:center">
+        
         <div>
-            <h1>Tap the Ballon</h1>
+            <h1 style="font-size: 50px;font-variant: small-caps">Tap the Ballon</h1>
         </div>
         <div id='root'>
             <div>
@@ -41,15 +42,26 @@
         </div>
         <div style='display:none; position: absolute;bottom: 3%' id='newgame'>
             <h2>Are you happy with your result?</h2>
-            <button>Yes</button>
-            <button>NO</button>
+            <button onclick="myPage.clickyes()">Yes</button>
+            <button onclick="myPage.clickyes()">NO</button>
         </div>
         <div style='display:none;position: absolute; bottom: 20%;font-size:30px' id='result'>
 
         </div>
     </div>
+    <div id='page2' style="display:none;text-align: center">
+        <h1>Tell me about it</h1>
+        <input style='height: 70px;width: 50' type="text" placeholder="Text here">
+        <br><button onclick="myPage.clicksubmit()">Submit</button>
+    </div>
+    <div id='page3' style='display:none;text-align: center'>
+        <h1>Thank you for your input</h1>
+        <br><br><br>
+        <h1>Here is your reward</h1>
+        <h1>+300⭐</h1>
+    </div>
     <script src="1.js"></script>
-   
+
 </body>
 
 </html>
